@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg: #0a0a0a;
     --surface: #111111;
@@ -22,9 +22,9 @@
     --ff-display: 'Syne', sans-serif;
     --ff-mono: 'DM Mono', monospace;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -32,7 +32,7 @@
     overflow-x: hidden;
     cursor: none;
   }
-
+ 
   /* Custom cursor */
   .cursor {
     width: 12px; height: 12px;
@@ -53,7 +53,7 @@
     z-index: 9998;
     transition: transform 0.35s ease;
   }
-
+ 
   /* Noise overlay */
   body::before {
     content: '';
@@ -63,7 +63,7 @@
     z-index: 1000;
     opacity: 0.35;
   }
-
+ 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
@@ -90,7 +90,7 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--text); }
-
+ 
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -98,14 +98,14 @@
     padding: 0 48px 80px;
     position: relative; overflow: hidden;
   }
-
+ 
   .hero-bg {
     position: absolute; inset: 0;
     background:
       radial-gradient(ellipse 60% 50% at 70% 30%, rgba(200,240,74,0.07) 0%, transparent 70%),
       radial-gradient(ellipse 40% 60% at 20% 80%, rgba(74,240,200,0.05) 0%, transparent 60%);
   }
-
+ 
   .hero-grid {
     position: absolute; inset: 0;
     background-image:
@@ -114,7 +114,7 @@
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
   }
-
+ 
   .hero-tag {
     font-family: var(--ff-mono);
     font-size: 11px; letter-spacing: 0.15em;
@@ -122,16 +122,16 @@
     margin-bottom: 24px;
     opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
   }
-
+ 
   .hero-name {
     font-size: clamp(64px, 10vw, 140px);
     font-weight: 800; line-height: 0.92;
     letter-spacing: -0.03em;
     opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
   }
-
+ 
   .hero-name .line2 { color: var(--accent); display: block; }
-
+ 
   .hero-sub {
     margin-top: 32px;
     font-family: var(--ff-mono);
@@ -139,12 +139,12 @@
     max-width: 480px; line-height: 1.7;
     opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
   }
-
+ 
   .hero-cta {
     margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap;
     opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
   }
-
+ 
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 14px 28px; border-radius: 2px;
@@ -160,7 +160,7 @@
     border: 1px solid var(--border2); color: var(--text);
   }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-
+ 
   .hero-scroll {
     position: absolute; right: 48px; bottom: 80px;
     display: flex; flex-direction: column; align-items: center; gap: 12px;
@@ -176,22 +176,22 @@
     background: linear-gradient(to bottom, var(--accent), transparent);
     animation: scrollPulse 2s infinite;
   }
-
+ 
   /* SECTIONS */
   section { padding: 120px 48px; }
-
+ 
   .section-label {
     font-family: var(--ff-mono); font-size: 11px;
     letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 16px;
   }
-
+ 
   .section-title {
     font-size: clamp(36px, 5vw, 64px);
     font-weight: 800; line-height: 1; letter-spacing: -0.02em;
     margin-bottom: 64px;
   }
-
+ 
   /* ABOUT */
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
@@ -199,7 +199,7 @@
   .about-text { font-size: 18px; line-height: 1.75; color: #b8b5b0; }
   .about-text strong { color: var(--text); }
   .about-text p + p { margin-top: 20px; }
-
+ 
   .about-stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
     border: 1px solid var(--border);
@@ -218,7 +218,7 @@
     letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--muted); margin-top: 8px;
   }
-
+ 
   /* EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 1px; }
   .exp-item {
@@ -240,10 +240,10 @@
     padding: 4px 10px; border: 1px solid var(--border2);
     color: var(--muted); white-space: nowrap; align-self: flex-start;
   }
-
+ 
   /* PROJECTS */
   .projects-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
     border: 1px solid var(--border);
   }
   .project-card {
@@ -269,12 +269,19 @@
   .project-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; }
   .project-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .project-gh {
+    display: inline-block; margin-bottom: 14px;
+    font-family: var(--ff-mono); font-size: 11px;
+    color: var(--accent2); text-decoration: none;
+    letter-spacing: 0.06em; transition: color 0.2s;
+  }
+  .project-gh:hover { color: var(--accent); }
   .project-tag {
     font-family: var(--ff-mono); font-size: 10px;
     padding: 3px 8px; background: rgba(200,240,74,0.08);
     color: var(--accent); border-radius: 2px;
   }
-
+ 
   /* SKILLS */
   .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 80px; }
   .skill-group-title {
@@ -294,7 +301,7 @@
     background: rgba(200,240,74,0.06);
     color: var(--accent);
   }
-
+ 
   /* CONTACT */
   .contact-section { background: var(--surface); border-top: 1px solid var(--border); }
   .contact-inner {
@@ -315,7 +322,7 @@
   }
   .contact-link:hover { color: var(--accent); }
   .contact-link::before { content: '→'; color: var(--accent); }
-
+ 
   /* FOOTER */
   footer {
     padding: 32px 48px; border-top: 1px solid var(--border);
@@ -325,7 +332,7 @@
     font-family: var(--ff-mono); font-size: 11px;
     color: var(--muted); letter-spacing: 0.08em;
   }
-
+ 
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -335,7 +342,7 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
-
+ 
   .reveal {
     opacity: 0; transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -344,7 +351,7 @@
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
-
+ 
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
@@ -359,10 +366,10 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
+ 
 <nav id="nav">
   <div class="nav-logo">AE</div>
   <div class="nav-links">
@@ -373,12 +380,12 @@
     <a href="#contact">Contact</a>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-
+ 
   <div class="hero-tag">Software Engineer · Full-Stack · AI · Technical Sales</div>
   <h1 class="hero-name">
     Ahmed<br>
@@ -386,19 +393,19 @@
   </h1>
   <p class="hero-sub">
     Building intelligent systems, scalable web applications,<br>
-    and AI-powered products — from Milton, Ontario.
+    and AI-powered products — from Mississauga, Ontario.
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn btn-primary">View my work</a>
     <a href="#contact" class="btn btn-ghost">Get in touch</a>
   </div>
-
+ 
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     <span>Scroll</span>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label">01 — About</div>
@@ -429,13 +436,13 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="section-label">02 — Experience</div>
   <div class="section-title reveal">Where I've worked</div>
   <div class="exp-list">
-
+ 
     <div class="exp-item reveal">
       <div class="exp-date">Jan 2024 — Present</div>
       <div>
@@ -445,7 +452,7 @@
       </div>
       <div class="exp-tag">Cybersecurity</div>
     </div>
-
+ 
     <div class="exp-item reveal reveal-delay-1">
       <div class="exp-date">Jun 2024 — Present</div>
       <div>
@@ -455,7 +462,7 @@
       </div>
       <div class="exp-tag">Technical Sales</div>
     </div>
-
+ 
     <div class="exp-item reveal reveal-delay-2">
       <div class="exp-date">May — Sept 2023</div>
       <div>
@@ -465,20 +472,20 @@
       </div>
       <div class="exp-tag">Full-Stack</div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">03 — Projects</div>
   <div class="section-title reveal">Things I've built</div>
   <div class="projects-grid">
-
+ 
     <div class="project-card reveal">
       <div class="project-num">001</div>
       <div class="project-title">LLM Soccer Training Planner</div>
-      <div class="project-desc">AI-powered soccer training platform using LLMs to generate personalized drill plans and coaching insights based on player position, skill level, and goals.</div>
+      <div class="project-desc">AI-powered soccer training platform using LLMs to generate personalized drill plans and coaching insights based on player position, skill level, and training goals.</div>
       <div class="project-tags">
         <span class="project-tag">React</span>
         <span class="project-tag">Python</span>
@@ -486,7 +493,7 @@
         <span class="project-tag">Node.js</span>
       </div>
     </div>
-
+ 
     <div class="project-card reveal reveal-delay-1">
       <div class="project-num">002</div>
       <div class="project-title">Premier League Match Predictor</div>
@@ -498,7 +505,7 @@
         <span class="project-tag">React</span>
       </div>
     </div>
-
+ 
     <div class="project-card reveal reveal-delay-2">
       <div class="project-num">003</div>
       <div class="project-title">MediSure</div>
@@ -510,16 +517,80 @@
         <span class="project-tag">Express</span>
       </div>
     </div>
-
+ 
+    <div class="project-card reveal">
+      <div class="project-num">004</div>
+      <div class="project-title">Budget Buddy</div>
+      <div class="project-desc">Multi-user budget planning platform with a multi-threaded C++ server, JWT authentication, ACID-compliant expense transactions, and real-time analytics dashboard.</div>
+      <a href="https://github.com/aelghandour33/Budget-Buddy" target="_blank" class="project-gh">↗ GitHub</a>
+      <div class="project-tags">
+        <span class="project-tag">C++</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">JWT</span>
+        <span class="project-tag">REST API</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">005</div>
+      <div class="project-title">Job Recruitment Portal</div>
+      <div class="project-desc">Full-stack recruitment system enabling job seekers to create profiles, browse roles, and apply — while employers manage applicants with role-based access control.</div>
+      <a href="https://github.com/aelghandour33/Job-recruitment-portal" target="_blank" class="project-gh">↗ GitHub</a>
+      <div class="project-tags">
+        <span class="project-tag">Full-Stack</span>
+        <span class="project-tag">SQL</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">REST API</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">006</div>
+      <div class="project-title">Travel System</div>
+      <div class="project-desc">A travel management system for booking and organizing trips, destinations, and itineraries with user authentication and data persistence.</div>
+      <a href="https://github.com/aelghandour33/Travel-System" target="_blank" class="project-gh">↗ GitHub</a>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Database</span>
+        <span class="project-tag">Full-Stack</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal">
+      <div class="project-num">007</div>
+      <div class="project-title">The Battle of the Marauders</div>
+      <div class="project-desc">VR MMORPG set in a medieval fantasy world with an escape storyline. Built game mechanics including character customization, level progression, and permadeath. Created pixel art assets and UI for combat and character creation.</div>
+      <a href="https://github.com/aelghandour33/The-Battle-of-Mauraders" target="_blank" class="project-gh">↗ GitHub</a>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">VR</span>
+        <span class="project-tag">Game Design</span>
+        <span class="project-tag">Pixel Art</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">008</div>
+      <div class="project-title">Robyn — Bird Collision Prevention</div>
+      <div class="project-desc">Environmental innovation device crafted from sustainable materials to prevent bird-window collisions. Researched avian vision and behavior to optimize marker patterns. Prototyped, tested with local environmental groups, and iterated based on field data.</div>
+      <a href="https://github.com/ShaimaaAliECE/group-project-team-22" target="_blank" class="project-gh">↗ GitHub</a>
+      <div class="project-tags">
+        <span class="project-tag">Environmental</span>
+        <span class="project-tag">Hardware</span>
+        <span class="project-tag">Research</span>
+        <span class="project-tag">Prototyping</span>
+      </div>
+    </div>
+ 
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="section-label">04 — Skills</div>
   <div class="section-title reveal">What I work with</div>
   <div class="skills-container">
-
+ 
     <div class="reveal">
       <div class="skill-group-title">Languages</div>
       <div class="skill-pills">
@@ -531,7 +602,7 @@
         <span class="skill-pill">HTML/CSS</span>
       </div>
     </div>
-
+ 
     <div class="reveal reveal-delay-1">
       <div class="skill-group-title">Frameworks & Libraries</div>
       <div class="skill-pills">
@@ -545,7 +616,7 @@
         <span class="skill-pill">pandas</span>
       </div>
     </div>
-
+ 
     <div class="reveal reveal-delay-2">
       <div class="skill-group-title">Cloud & DevOps</div>
       <div class="skill-pills">
@@ -558,7 +629,7 @@
         <span class="skill-pill">Linux</span>
       </div>
     </div>
-
+ 
     <div class="reveal reveal-delay-3">
       <div class="skill-group-title">Tools & Databases</div>
       <div class="skill-pills">
@@ -571,10 +642,10 @@
         <span class="skill-pill">IntelliJ</span>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-inner">
@@ -589,23 +660,23 @@
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <span>Ahmed Elghandour © 2026</span>
-  <span>Milton, Ontario · Open to opportunities</span>
+  <span>Mississauga, Ontario · Open to opportunities</span>
 </footer>
-
+ 
 <script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
-
+ 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
   });
-
+ 
   function animateRing() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
@@ -613,13 +684,13 @@
     requestAnimationFrame(animateRing);
   }
   animateRing();
-
+ 
   // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
-
+ 
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
